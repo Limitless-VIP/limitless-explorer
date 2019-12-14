@@ -25,22 +25,24 @@ async function syncProposal() {
         const pps = await rpc.call('getbudgetinfo');
         const mnc = await rpc.call('getmasternodecount');
         await forEach(pps, async(pp) => {
-            const proposal = new Proposal({
-                name: pp.Name,
-                yeas: pp.Yeas,
-                nays: pp.Nays,
-                blockStart: pp.BlockStart,
-                blockEnd: pp.BlockEnd,
-                status: ((pp.Yeas - pp.Nays) * 10 > mnc.total),
-                budgetTotal: pp.TotalPayment,
-                budgetMonthly: pp.MonthlyPayment,
-                budgetPeriod: pp.RemainingPaymentCount,
-                hash: pp.Hash,
-                feehash: pp.FeeHash,
-                url: pp.URL,
-            });
+            if (pp.RemainingPaymentCount >= 1) {
+                const proposal = new Proposal({
+                    name: pp.Name,
+                    yeas: pp.Yeas,
+                    nays: pp.Nays,
+                    blockStart: pp.BlockStart,
+                    blockEnd: pp.BlockEnd,
+                    status: ((pp.Yeas - pp.Nays) * 10 > mnc.total),
+                    budgetTotal: pp.TotalPayment,
+                    budgetMonthly: pp.MonthlyPayment,
+                    budgetPeriod: pp.RemainingPaymentCount,
+                    hash: pp.Hash,
+                    feehash: pp.FeeHash,
+                    url: pp.URL,
+                });
 
-            inserts.push(proposal);
+                inserts.push(proposal);
+            }
         });
     }
 
@@ -48,22 +50,24 @@ async function syncProposal() {
         const pps = await rpc.call('mnbudget', ['show']);
         const mnc = await rpc.call('masternode', ['count']);
         for (const prop in pps) {
-            const proposal = new Proposal({
-                name: pps[prop].Name,
-                yeas: pps[prop].Yeas,
-                nays: pps[prop].Nays,
-                blockStart: pps[prop].BlockStart,
-                blockEnd: pps[prop].BlockEnd,
-                status: ((pps[prop].Yeas - pps[prop].Nays) * 10 > mnc),
-                budgetTotal: pps[prop].TotalPayment,
-                budgetMonthly: pps[prop].MonthlyPayment,
-                budgetPeriod: pps[prop].RemainingPaymentCount,
-                hash: pps[prop].Hash,
-                feehash: pps[prop].FeeHash,
-                url: pps[prop].URL,
-            });
+            if (pps[prop].RemainingPaymentCount >= 1) {
+                const proposal = new Proposal({
+                    name: pps[prop].Name,
+                    yeas: pps[prop].Yeas,
+                    nays: pps[prop].Nays,
+                    blockStart: pps[prop].BlockStart,
+                    blockEnd: pps[prop].BlockEnd,
+                    status: ((pps[prop].Yeas - pps[prop].Nays) * 10 > mnc),
+                    budgetTotal: pps[prop].TotalPayment,
+                    budgetMonthly: pps[prop].MonthlyPayment,
+                    budgetPeriod: pps[prop].RemainingPaymentCount,
+                    hash: pps[prop].Hash,
+                    feehash: pps[prop].FeeHash,
+                    url: pps[prop].URL,
+                });
 
-            inserts.push(proposal);
+                inserts.push(proposal);
+            }
         }
     }
 
