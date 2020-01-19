@@ -1,10 +1,10 @@
 {
-  "name": "galilel-explorer",
+  "name": "limitless-vip-explorer",
   "version": "0.2.0",
-  "description": "Galilel Explorer",
+  "description": "Limitless Explorer",
   "main": "public",
-  "repository": "git@github.com:Galilel-Project/galilel-explorer.git",
-  "author": "Maik Broemme <maik.broemme@galilel.org>",
+  "repository": "git@github.com:Limitless-VIP/limitless-explorer.git",
+  "author": "Limitless VIP <info@limitlessvip.co.za>",
   "license": "MIT",
   "scripts": {
     "build": "npm run build:web",
