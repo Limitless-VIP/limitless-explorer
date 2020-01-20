@@ -3,7 +3,7 @@
  */
 const config = {
   api: {
-    'host': 'https://explorer.galilel.org',
+    'host': 'https://explorer.limitlessvip.co.za',
     'port': '3000',
     'portWorker': '443',
     'prefix': '/api',
@@ -41,8 +41,8 @@ const config = {
    * Configure your coin details here.
    */
   coinDetails: {
-    name: 'Galilel',
-    shortName: 'GALI',
+    name: 'Limitless VIP',
+    shortName: 'VIP',
     coinNumberFormat: '0,0.0000',
     coinNumberFormatFinance: '+0,0.0000'
   },
@@ -64,76 +64,71 @@ const config = {
    */
   coinMarketCap: {
     'api': 'https://api.coinmarketcap.com/v1/ticker/',
-    'ticker': 'galilel'
+    'ticker': 'vip'
   },
   coinGecko: {
     'api': 'https://api.coingecko.com/api/v3/coins/',
-    'ticker': 'galilel'
+    'ticker': 'tittiecoin'
   },
 
   /**
-   * Specify the market API provider (CoinMarketCap and CoinGecko are supported).
+   * Specify the market API provider (coinMarketCap and coinGecko are supported).
    */
-  apiProvider: 'CoinMarketCap',
+  apiProvider: 'CoinGecko',
 
   /**
-   * All links to social media.
+   * All links to website and social media.
    */
   socialMedia: [
     {
       'title': 'Website',
-      'link': 'https://galilel.org/',
+      'link': 'https://limitlessvip.co.za',
       'icon': 'fas-home'
     },
     {
       'title': 'Discord',
-      'link': 'https://discord.galilel.org',
+      'link': 'https://discord.gg/wtz6QYX',
       'icon': 'fab-discord'
     },
     {
       'title': 'Telegram',
-      'link': 'https://t.me/GalilelEN',
+      'link': 'https://t.me/joinchat/AAAAAEm6COqwOoNWBS8GSQ',
       'icon': 'fab-telegram'
     },
     {
       'title': 'Twitter',
-      'link': 'https://twitter.com/GalilelEN',
+      'link': 'https://twitter.com/LimitlessVIP_',
       'icon': 'fab-twitter'
     },
     {
       'title': 'BitcoinTalk',
-      'link': 'https://bitcointalk.galilel.org',
+      'link': 'https://bitcointalk.org/index.php?topic=437695',
       'icon': 'fab-bitcoin'
     },
     {
       'title': 'Facebook',
-      'link': 'https://facebook.com/GalilelEN',
+      'link': 'https://www.facebook.com/limitlessvip.co.za/',
       'icon': 'fab-facebook'
     },
     {
       'title': 'YouTube',
-      'link': 'https://youtube.com/channel/UC26rKBciicXp33dK8NkALmg',
+      'link': 'https://www.youtube.com/channel/UC_RUvSj5WWz9u1cXiwmzwuQ',
       'icon': 'fab-youtube'
     },
     {
       'title': 'Github',
-      'link': 'https://github.com/Galilel-Project',
+      'link': 'https://github.com/Limitless-VIP',
       'icon': 'fab-github'
     },
     {
       'title': 'Instagram',
-      'link': 'https://instagram.com/galilel_en/',
+      'link': 'https://www.instagram.com/limitlessvip.co.za/',
       'icon': 'fab-instagram'
     },
     {
       'title': 'Reddit',
-      'link': 'https://www.reddit.com/r/Galilel/',
+      'link': 'https://www.reddit.com/r/tittiecoin/',
       'icon': 'fab-reddit'
-    },
-    {
-      'title': 'Medium',
-      'link': 'https://medium.com/galilel',
-      'icon': 'fab-medium'
     }
   ],
 
@@ -142,40 +137,12 @@ const config = {
    */
   exchanges: [
     {
-      'title': 'Graviex',
-      'link': 'https://graviex.net/markets/galibtc'
-    },
-    {
       'title': 'Crex24',
-      'link': 'https://crex24.com/exchange/GALI-BTC'
-    },
-    {
-      'title': 'Aiodex',
-      'link': 'https://aiodex.com/exchange/GALI_BTC'
-    },
-    {
-      'title': 'CRATEX',
-      'link': 'https://cratex.io/index.php?pair=GALI/BTC'
-    },
-    {
-      'title': 'Raisex',
-      'link': 'https://raisex.io/trade/GALI_BTC'
-    },
-    {
-      'title': 'MCT+',
-      'link': 'https://trade.mct.plus/'
+      'link': 'https://crex24.com/exchange/VIP-BTC'
     },
     {
       'title': 'FINEXBOX',
-      'link': 'https://www.finexbox.com/market/pair/GALI-BTC.html'
-    },
-    {
-      'title': 'Block DX',
-      'link': 'https://blocknet.co/galilel-2/about/'
-    },
-    {
-      'title': 'Bisq',
-      'link': 'https://bisq.network/markets/?currency=gali_btc'
+      'link': 'https://www.finexbox.com/market/pair/VIP-BTC'
     }
   ],
 
@@ -202,39 +169,39 @@ const config = {
        * Best case.
        */
       {
-        color: "#72f87b",
+        color: "#f5a791",
         title: "Rank 1/10 - Excellent!!!"
       },
       {
-        color: "#84f771",
+        color: "#f49e87",
         title: "Rank 2/10 - Excellent!"
       },
       {
-        color: "#a0f771",
+        color: "#f3957d",
         title: "Rank 3/10 - Excellent"
       },
       {
-        color: "#bcf671",
+        color: "#f18c73",
         title: "Rank 4/10 - Very Good"
       },
       {
-        color: "#d8f671",
+        color: "#f08269",
         title: "Rank 5/10 - Above Average"
       },
       {
-        color: "#f3f671",
+        color: "#ef795f",
         title: "Rank 6/10 - Average"
       },
       {
-        color: "#f5dc71",
+        color: "#ee6f56",
         title: "Rank 7/10 - Below Average"
       },
       {
-        color: "#f5c071",
+        color: "#ec654e",
         title: "Rank 8/10 - Not Optimal"
       },
       {
-        color: "#f4a471",
+        color: "#eb5a46",
         title: "Rank 9/10 - Not Optimal!"
       },
 
@@ -242,7 +209,7 @@ const config = {
        * Worst case (default).
        */
       {
-        color: "#f48871",
+        color: "#ea4f3d",
         title: "Rank 10/10 - Not Optimal!!!"
       }
     ]
@@ -253,8 +220,6 @@ const config = {
    */
   community: {
     highlightedAddresses: [
-      { label: 'Community Donations', address: 'UUr5nDmykhun1HWM7mJAqLVeLzoGtx19dX' },
-      { label: 'Development Budget', address: '7U3FMDhKv4j5bzauurPoX1TtqE7hPowSJi' },
     ]
   },
 
