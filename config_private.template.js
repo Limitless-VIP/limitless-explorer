@@ -5,13 +5,13 @@ const config_private = {
   db: {
     'host': 'localhost',
     'port': '27017',
-    'name': 'galileldb',
-    'user': 'galileluser',
-    'pass': 'galilelpassword'
+    'name': 'limitlessdb',
+    'user': 'limitlessuser',
+    'pass': 'limitlesspassword'
   },
   rpc: {
     'host': 'localhost',
-    'port': '36002',
+    'port': '8008',
     'user': 'rpcuser',
     'pass': 'rpcpassword',
 
